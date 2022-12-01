@@ -1,0 +1,11 @@
+psuedocode for Hangman (2 player game)
+
+- Main screen loads prompting players to enter their names
+- On main screen is a the title of the game at the top, players names on the left and right sides pf the screen and a riddle to help guess the at the bottom
+- player that enters their name first will get to go first, other player will go next.
+- players will exchage turns guessing the word
+- each missed letter will add a limb - the hangman will be made up of six limbs
+- if the player guess the word a prompt will appear "You guessed it!"
+- if the word is not guessed after six missed attemps a prompt will appear "you got hangman"
+- reset button to be added to page
+
