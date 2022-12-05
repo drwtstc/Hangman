@@ -15,22 +15,14 @@
 </head>
 
 <body>
-    <h1>Hangman!</br>Vanilla Flavored</h1>
+    <h1 class="heading" id="hdg1">Hangman!</br>Vanilla Flavored</h1>
+
     <div class="gm-container">
-    <canvas class="cnvs">Hangman interactive window</canvas>
-    <div id="checkedLtrs"></div>
-      <!-- <div id="options-container"></div>
-      <div id="letter-container" class="letter-container hide"></div>
-      <div id="user-input-section"></div>
-      <canvas id="canvas"></canvas>
-      <div id="new-game-container" class="new-game-popup hide">
-        <div id="result-text"></div>
-        <button id="btn-reset">Reset</button>
-      </div> -->
+        <canvas class="cnvs" id="hmvisual">Hangman interactive window</canvas>
+        <div id="checkedLtrs"></div>
     </div>
- 
-    <TABLE>
-        <TR class="keyboard" align="center">
+    <TABLE id="kb-container">
+        <TR class="keyboard">
          <TD><INPUT TYPE=BUTTON VALUE=" Q "</TD>
          <TD><INPUT TYPE=BUTTON VALUE=" W "</TD>
          <TD><INPUT TYPE=BUTTON VALUE=" E "</TD>
@@ -62,7 +54,7 @@
         </TR>
        </TABLE>
        <br>
-       <button id="reset">Reset Game</button>
+       <button class="rst-btn" id="reset">Reset Game</button>
     
 
 </body>
