@@ -1,7 +1,21 @@
-body {
-    background-color: bisque;
+* {
+    box-sizing: border-box;
+
 }
 
-h1 {
-    color: blueviolet;
+body {
+    background-color: #F3E5AB;
+}
+
+h1{
+    text-align: center;
+}
+
+.keyboard {
+display: flex;
+}
+
+.cnvs {
+    height: 300px;
+    width: 300px;
 }
