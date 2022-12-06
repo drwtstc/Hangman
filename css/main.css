@@ -11,17 +11,46 @@ h1{
     text-align: center;
 }
 
-.keyboard {
-display: flex;
+table   {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 canvas {
     display: block;
     margin: auto;
+    border: 1px solid #000000
 }
 
-.kbcont {
+#kbRow2 {
+    margin-left: 10px;
+}
+
+.rst-btn{
+    text-align: center;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    margin:auto;
+}
+
+#checkedLtrs {
+    display: block;
+    text-align: center;
+    display: flex;
+    margin: auto;
+}
+
+#head {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: black;
+  
+}
+
+#torso {
+    width: 20px;
+    height: 20px;
+    background-color: black;
 }

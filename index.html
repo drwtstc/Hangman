@@ -15,48 +15,53 @@
 </head>
 
 <body>
-    <h1 class="heading" id="hdg1">Hangman!</br>Vanilla Flavored</h1>
+    <h1 class="heading" id="hdg1">Hangman!</br><i>Vanilla Flavored</i></h1>
 
-    <div class="gm-container">
-        <canvas class="cnvs" id="hmvisual">Hangman interactive window</canvas>
+    <div id="gm-container">
+        <!-- <canvas class="cnvs" id="hmvisual">Hangman interactive window</canvas> -->
     </br>
         <div id="checkedLtrs"></div>
     </div>
     </br>
     <TABLE id="kb-container">
-        <TR class="keyboard">
-         <TD><INPUT TYPE=BUTTON VALUE=" Q "</TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" W "</TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" E "</TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" R "</TD>  
-         <TD><INPUT TYPE=BUTTON VALUE=" T "</TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" Y "</TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" U "</TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" I "</TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" O "</TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" P "</TD>
-        <TR>
-         <TD><INPUT TYPE=BUTTON VALUE=" A " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" S " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" D " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" F " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" G " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" H " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" J " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" K " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" L " </TD>
+        <TR id="kbRow1">
+         <TD><INPUT TYPE=BUTTON VALUE=" Q ">
+         <TD><INPUT TYPE=BUTTON VALUE=" W ">
+         <TD><INPUT TYPE=BUTTON VALUE=" e ">
+         <TD><INPUT TYPE=BUTTON VALUE=" R ">  
+         <TD><INPUT TYPE=BUTTON VALUE=" T ">
+         <TD><INPUT TYPE=BUTTON VALUE=" Y ">
+         <TD><INPUT TYPE=BUTTON VALUE=" u ">
+         <TD><INPUT TYPE=BUTTON VALUE=" i ">
+         <TD><INPUT TYPE=BUTTON VALUE=" o ">
+         <TD><INPUT TYPE=BUTTON VALUE=" p ">
         </TR>
-         <TD><INPUT TYPE=BUTTON VALUE=" Z " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" X " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" C " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" V " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" B " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" N " </TD>
-         <TD><INPUT TYPE=BUTTON VALUE=" M " </TD>
+        <TR id="kbRow2">
+         <TD><INPUT TYPE=BUTTON VALUE=" A " >
+         <TD><INPUT TYPE=BUTTON VALUE=" S " >
+         <TD><INPUT TYPE=BUTTON VALUE=" D " >
+         <TD><INPUT TYPE=BUTTON VALUE=" F " >
+         <TD><INPUT TYPE=BUTTON VALUE=" G " >
+         <TD><INPUT TYPE=BUTTON VALUE=" H " >
+         <TD><INPUT TYPE=BUTTON VALUE=" J " >
+         <TD><INPUT TYPE=BUTTON VALUE=" K " >
+         <TD><INPUT TYPE=BUTTON VALUE=" L " >
         </TR>
-       </TABLE>
+        <TR id="kbRow3">
+         <TD><INPUT TYPE=BUTTON VALUE=" Z " >
+         <TD><INPUT TYPE=BUTTON VALUE=" X " >
+         <TD><INPUT TYPE=BUTTON VALUE=" C " >
+         <TD><INPUT TYPE=BUTTON VALUE=" V " >
+         <TD><INPUT TYPE=BUTTON VALUE=" B " >
+         <TD><INPUT TYPE=BUTTON VALUE=" N " >
+         <TD><INPUT TYPE=BUTTON VALUE=" M " >
+        </TR>
+    </TABLE>
        <br>
-       <button class="rst-btn" id="reset">Reset Game</button>
+       
+    <button class="rst-btn" id="reset">Reset Game</button>
+
+    <div id="outcome"></div>
     
 
 </body>
