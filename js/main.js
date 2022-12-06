@@ -20,9 +20,11 @@ for (let i = 0; i < tableEl.length; i++){
     tableEl[i].addEventListener('click',clickNum)
 }
 
-const rdmWord = hmWords[Math.floor(Math.random() * hmWords.length)]
+function rdmWord () {
+    solution = hmWords[Math.floor(Math.random() * hmWords.length)]
+    console.log(rdmWord)
+}
 
-console.log(rdmWord)
 
 let bool = [];
 let word = "someword";//word from random word function
@@ -30,7 +32,7 @@ let word = "someword";//word from random word function
 for (let i = 0; i < word.length; i++){
     bool.push(null);
 }
-
+//canvas
 const canvas = document.querySelector('canvas');
 const canvasCtxt = canvas.getContext('2d');
 canvasCtxt.fillStyle = "#FFFFFF";
