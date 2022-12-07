@@ -9,7 +9,7 @@ This game does not use a hanging gallow with a character being produced with eac
 HTML, CSS and "Vanilla" Javascript (thus term "Vanilla Flavored" in the title)
 
 ## Getting Started:
-See link: https://github.com/drwtstc/Hangman/tree/gh-pages
+See link: https://drwtstc.github.io/Hangman/
 
 ## Next Steps / Icebox items
 - Onscreen key board
