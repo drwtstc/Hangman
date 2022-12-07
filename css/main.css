@@ -23,11 +23,13 @@ canvas {
     border: 1px solid #000000
 }
 
-#kbRow2 {
-    margin-left: 10px;
+#kbRow2,#kbRow3  {
+    display: flex;
+    justify-content: center;
+    margin:auto;
 }
 
-.rst-btn{
+#reset {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -36,9 +38,20 @@ canvas {
 
 #checkedLtrs {
     display: block;
-    text-align: center;
     display: flex;
-    margin: auto;
+    justify-content: center;
+    margin:auto;
+}
+
+#head,
+#leftarm,
+#rightarm,
+#torso,
+#leftleg,
+#rightleg {
+    display: flex;
+    justify-content: center;
+    margin:auto;
 }
 
 #head {
@@ -49,8 +62,32 @@ canvas {
   
 }
 
+#leftarm {
+    width: 5px;
+    height: 30px;
+    background-color: black;
+}
+
+#rightarm {
+    width: 5px;
+    height: 15px;
+    background-color: black;
+}
+
 #torso {
-    width: 20px;
-    height: 20px;
+    width: 5px;
+    height: 15px;
+    background-color: black;
+}
+
+#leftleg {
+    width: 5px;
+    height: 15px;
+    background-color: black;
+}
+
+#rightleg {
+    width: 5px;
+    height: 15px;
     background-color: black;
 }
