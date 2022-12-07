@@ -25,4 +25,4 @@ See link: https://drwtstc.github.io/Hangman/
 - mobile compatbility
 
 ## Screenshot
-https://i.imgur.com/qr9E2Qs.png
+![Alt text](https://i.imgur.com/qr9E2Qs.png "Screenshot1")
