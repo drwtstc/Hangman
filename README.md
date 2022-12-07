@@ -20,8 +20,9 @@ See link: https://drwtstc.github.io/Hangman/
 - More words to guess
 - Allow one or more players to enter their names at the start of the game
 - Render one or more players on the screen
-- Design chnages
+- Design changes
 - interactive animations
+- mobile compatbility
 
 ## Screenshot
 https://i.imgur.com/qr9E2Qs.png
