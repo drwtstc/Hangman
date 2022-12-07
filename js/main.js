@@ -10,47 +10,116 @@ const hmWords = [
     "NIGHT",
 ];
 
-const gmCont = document.getElementById("gm-container")
+// const gmCont = document.getElementById("gm-container")
 
-const head = document.createElement("div")
-const leftArm = document.createElement("div")
-const rightArm = document.createElement("div")
-const torso = document.createElement("div")
-const leftLeg = document.createElement("div")
-const rightLeg = document.createElement("div")
+// const head = document.createElement("div")
+// const leftArm = document.createElement("div")
+// const rightArm = document.createElement("div")
+// const torso = document.createElement("div")
+// const leftLeg = document.createElement("div")
+// const rightLeg = document.createElement("div")
 
 
-const idArray = [
-    "head",
-    "leftarm",
-    "rightarm",
-    "torso",
-    "leftleg",
-    "rightleg",
-]
+// const idArray = [
+//     "head",
+//     "leftarm",
+//     "rightarm",
+//     "torso",
+//     "leftleg",
+//     "rightleg",
+// ]
 
-const bodyPartsArray = [
-    head,
-    leftArm,
-    rightArm,
-    torso,
-    leftLeg,
-    rightLeg,
-]
+// const bodyPartsArray = [
+//     head,
+//     leftArm,
+//     rightArm,
+//     torso,
+//     leftLeg,
+//     rightLeg,
+// ]
  
 // const resetBtn = document.getElementById("reset");
 // resetBtn.addEventListener("click", init);
 
-const hiddenWord = "";
-const checkedLtrs = [];
-const errors = 10;
+//////////////////////////////////////////////////////////////////////
+let hangman;
 
-hiddenWord = grabWord();
+//Trying to find the right code to initialize the game 
+const init = function() {
+    initControls();
+    hangman = new hangman()
+    drawCurrentWord();
+};
+document.getElementById("restart").addEventListener("click", init)
 
+const initControls = function() {
+    document.getElementById("you-win").classList   = "hide";
+    document.getElementById("game-over").classList = "hide";
+    document.getElementById("hangman").classList   = "";
+    document.getElementById("letters").innerHTML   = "";
+}
+
+//insert letter
+const insertLtr = function (evt){
+    if (evt.keycode < 65 || evt.keycode > 90)
+    return;
+
+    let letter = string.fromCharCode(evt.keycode);
+    let correct = hangman.askLetter(letter);
+
+    if (correct !== undefined && !correct) {
+        _addLetter(letter);
+      } else {
+        drawCurrentWord();
+      }
+}
+
+//draw hangman
+const dwHangman = function () {
+    document.getElementById("the-hangman").classList += " lifes-" + (hangman.errorsLeft + 1);
+   };
+
+const insertLetter = function (event) {
+    if (!hangman || (event.keyCode < 65 || event.keyCode > 90))
+      return;
+  
+    var letter  = String.fromCharCode(event.keyCode);
+    var correct = hangman.askLetter(letter);
+  
+    if (correct !== undefined && !correct) {
+      _addLetter(letter);
+      drawHangman();
+    } else {
+      drawCurrentWord();
+    }
+    afterRound()
+};
+
+//end round
+const afterRound = function () {
+  var status = hangman.gameStatus();
+
+  if (!status)
+    return;
+
+  if(status.toLowerCase() === "you win") {
+    document.getElementById("you-win").classList = "";
+  } else {
+    drawCurrentWord(hangman.secretWord.split(""));
+    document.getElementById("game-over").classList = "";
+  }
+
+  hangman = undefined;
+};
+
+//Game logic
 const grabWord = function () {
     const rdmWord = Math.floor(Math.random() * hmWords.length)
     return hmWords[rdmWord]; 
 } 
+const hiddenWord = grabWord();
+const checkedLtrs = [];
+const errors = 6;
 
 const getLtr = function (letter) {
     letter = letter.toLowerCase();
@@ -79,6 +148,23 @@ const showWord = function () {
         }
     });
     return wordState;
+};
+
+//outcomeA
+const gameFin = function() {
+    return errors === 0;
+};
+//outcomeB
+const gameConcl = function() {
+    return showWord().indexOf("_") < 0;
+};
+//Game complete outcome
+const gameOver = function() {
+    if(gameFin()) {
+        return "Ayeee You Won!";
+    } else if (gameConcl()) {
+        return "Yikes! You got Hangman"
+    }
 };
 
 // const checkedLtrsDiv = document.getElementById("checkedLtrs")
