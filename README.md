@@ -24,4 +24,4 @@ See link:
 - interactive animations
 
 ## Screenshot
-https://i.imgur.com/qr9E2Qs.png
+! https://i.imgur.com/qr9E2Qs.png
