@@ -1,10 +1,76 @@
-* {
+body {
+    background-color: #F3E5AB;
+}
+
+h1{
+    text-align: center;
+    padding-top: 30px;
+}
+
+#gm-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+    border:1px solid black;
+    padding-top: 15px;
+    margin: 10px 200px 10px 200px;
+    border-radius: 15px;
+}
+
+.letter {
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    margin: 0 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: #F3E5AB;
+}
+.current-word {
+    list-style: none;
+}
+.output {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.correct {
+    background-color: green;
+    transition: all 1s ease;
+}
+.error {
+    color: red;
+    opacity: 1;
+}
+.warning {
+    color: orange;
+    opacity: 1;
+}
+.win {
+    color: green;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
     box-sizing: border-box;
 
 }
 
-body {
-    background-color: #F3E5AB;
+
 }
 
 h1{
@@ -109,3 +175,8 @@ n
   border-color: #8A2512;
   color: #8A2512;
 }
+
+#currentWord span {
+    display: inline-block;
+    margin: 0 10px;
+  } */

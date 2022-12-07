@@ -10,76 +10,25 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script defer src="js/main.js"></script>
-    <title>Hangman</title>
+    <title>Vanilla Hangman</title>
 
 </head>
 
 <body>
+
     <h1 class="heading" id="hdg1">Hangman!</br><i>Vanilla Flavored</i></h1>
-
+    </br>
     <div id="gm-container">
-        <!-- <canvas class="cnvs" id="hmvisual">Hangman interactive window</canvas> -->
-        <div id="the-hangman">
-            <div id="head"></div>
-            <div id="leftarm"></div>
-            <div id="rightarm"></div>
-            <div id="torso"></div>
-            <div id="leftleg"></div>
-            <div id="rightleg"></div>
-          </div>
+    <form id="hangman">
+        <input id="letter" type="text" name="letter" maxlength="1"   placeholder="Enter a letter" />
+        <input id="guess" type="submit" name="guess" value="Guess" />
+        <button id="restart" type="button" name="play-again">Play Again</button>
+    </form>
     </br>
-        <div id="letters"></div>
-    </br>
-        <div id="checkedLtrs"></div>
-    </br>
-        <div id="you-win">
-            <p>You Won!</p>
-        </div>
-        <div id="game-over">
-            <p>Game Over!</p>
-        </div>    
+    <ul id="letters"></ul>
+    <p id="man"></p>
+    <p id="output" class="output"></p>
     </div>
-    </br>
-    <TABLE id="kb-container">
-        <TR id="kbRow1">
-         <TD><INPUT TYPE=BUTTON VALUE=" Q ">
-         <TD><INPUT TYPE=BUTTON VALUE=" W ">
-         <TD><INPUT TYPE=BUTTON VALUE=" E ">
-         <TD><INPUT TYPE=BUTTON VALUE=" R ">  
-         <TD><INPUT TYPE=BUTTON VALUE=" T ">
-         <TD><INPUT TYPE=BUTTON VALUE=" Y ">
-         <TD><INPUT TYPE=BUTTON VALUE=" U ">
-         <TD><INPUT TYPE=BUTTON VALUE=" I ">
-         <TD><INPUT TYPE=BUTTON VALUE=" O ">
-         <TD><INPUT TYPE=BUTTON VALUE=" p ">
-        </TR>
-        <TR id="kbRow2">
-         <TD><INPUT TYPE=BUTTON VALUE=" A " >
-         <TD><INPUT TYPE=BUTTON VALUE=" S " >
-         <TD><INPUT TYPE=BUTTON VALUE=" D " >
-         <TD><INPUT TYPE=BUTTON VALUE=" F " >
-         <TD><INPUT TYPE=BUTTON VALUE=" G " >
-         <TD><INPUT TYPE=BUTTON VALUE=" H " >
-         <TD><INPUT TYPE=BUTTON VALUE=" J " >
-         <TD><INPUT TYPE=BUTTON VALUE=" K " >
-         <TD><INPUT TYPE=BUTTON VALUE=" L " >
-        </TR>
-        <TR id="kbRow3">
-         <TD><INPUT TYPE=BUTTON VALUE=" Z " >
-         <TD><INPUT TYPE=BUTTON VALUE=" X " >
-         <TD><INPUT TYPE=BUTTON VALUE=" C " >
-         <TD><INPUT TYPE=BUTTON VALUE=" V " >
-         <TD><INPUT TYPE=BUTTON VALUE=" B " >
-         <TD><INPUT TYPE=BUTTON VALUE=" N " >
-         <TD><INPUT TYPE=BUTTON VALUE=" M " >
-        </TR>
-    </TABLE>
-       <br>
-       
-    <button id="restart">Restart Game</button>
-
-    <div id="outcome"></div>
-    
 
 </body>
 
