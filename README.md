@@ -1,4 +1,4 @@
-# Hangman! - Vanilla Vlavored
+# Hangman! - Vanilla Flavored
 
 ## Description
 Using the tradional concept of Hangman; a user must guess the word to win the game. In this in this game the user has 6 chances (lives) to miss a letter or they lose the game. If the user correctly guesses the word they win the game.
