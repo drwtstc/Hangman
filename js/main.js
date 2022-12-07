@@ -35,7 +35,7 @@
         guessInput.style.display = 'inline';
         guessButton.style.display = 'inline';
 
-        /* set up display of letters in current word */
+        //displaying letters
         letters = document.getElementById("letters");
         letters.innerHTML = '<li class="current-word">Current word:</li>';
 
